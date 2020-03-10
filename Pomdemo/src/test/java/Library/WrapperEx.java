@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WrapperEx {
-protected WebDriver driver;
+public WebDriver driver;
 	
 	public void launchApplication(String browser, String url) {
 		
