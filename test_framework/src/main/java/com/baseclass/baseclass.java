@@ -17,25 +17,38 @@ public class baseclass {
 	
 	 public void launchapp(String browser,String url)
 	 {
-		 try {
-				if (browser.equalsIgnoreCase("firefox")) {
-					System.setProperty("webdriver.gecko.driver","C://Selenium//geckodriver.exe");
-					driver = new FirefoxDriver();
-				} else if (browser.equalsIgnoreCase("chrome")) {
-					System.setProperty("webdriver.chrome.driver","C:\\Users\\BLTuser.BLT1221\\Desktop\\New\\chromedriver.exe");
-					driver=new ChromeDriver();
-
-				}
-
-				driver.manage().window().maximize();
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				driver.get(url);
-			
-			} catch (WebDriverException e) {
-				System.out.println(" browser could not be launched");
-			}
-		
-		}
+//		 try {
+//				if (browser.equalsIgnoreCase("firefox")) {
+//					System.setProperty("webdriver.gecko.driver","C://Selenium//geckodriver.exe");
+//					driver = new FirefoxDriver();
+//				} else if (browser.equalsIgnoreCase("chrome")) {
+//					System.setProperty("webdriver.chrome.driver","C:\\Users\\BLTuser.BLT1221\\Desktop\\New\\chromedriver.exe");
+//					driver=new ChromeDriver();
+//
+//				}
+//
+//				driver.manage().window().maximize();
+//				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//				driver.get(url);
+//			
+//			} catch (WebDriverException e) {
+//				System.out.println(" browser could not be launched");
+//			}
+//		
+//		}
+		 if(browser.equalsIgnoreCase("firefox"))
+		 {
+		driver=new FirefoxDriver();
+		 }
+		 else if(browser.equalsIgnoreCase("chrome")) {
+			 System.setProperty("webdriver.chrome.driver","C:\\Users\\BLTuser.BLT1221\\Desktop\\New\\chromedriver.exe");
+			 driver=new ChromeDriver();
+		 }
+		 driver.manage().window().maximize();
+		 driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		 driver.get(url);
+		 
+	 }
 	 
 	 public void screenshot(String path) throws IOException {
 		 
