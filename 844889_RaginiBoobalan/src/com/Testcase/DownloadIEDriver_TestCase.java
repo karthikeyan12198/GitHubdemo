@@ -18,7 +18,7 @@ public class DownloadIEDriver_TestCase extends WrapperClass
 	public void startup()
 	{
 		//Navigate to selenium.dev site
-		launch("chrome","https://www.selenium.dev/downloads/");
+		launch("chrome","https://www.selenium.dev/");
 	}
 	
 	@Test
@@ -31,13 +31,15 @@ public class DownloadIEDriver_TestCase extends WrapperClass
 	@Test
 	public void assertGet()
 	{
-		File file = new File("C:\\Users\\BLTuser.BLT1217\\Downloads\\IEDriverServer_x64_3.150.1.zip");
+		File file = new File("C:\\Users\\BLTuser.BLT1221\\Downloads\\IEDriverServer_x64_3.150.1.zip");
 		boolean check = file.exists();  //Check download file exists
 		if(check)
 		{
 			System.out.println("File Exists");
 			Assert.assertTrue(check);
 		}
+		else
+			System.out.println("not found");
 		//On check = true test will be passed
 		//On check = false test will be failed with assert message as "Not
 		
@@ -45,9 +47,9 @@ public class DownloadIEDriver_TestCase extends WrapperClass
 	
 	
 	@AfterClass
-	public void closes() throws IOException
+	public void closes() throws Throwable 
 	{
-		screenshot("C:\\Users\\BLTuser.BLT1217\\eclipse-workspace\\T_Seleniumhq\\Screenshott\\Oldtest.png");
+		screenshot("C:\\Users\\BLTuser.BLT1221\\git\\GitHubdemo\\844889_RaginiBoobalan\\Screenshott\\Oldtesttest.png");
 		quit();
 	}
 
